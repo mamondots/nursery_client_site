@@ -1,0 +1,16 @@
+.pagebg {
+  background-image: url(../../../assets/img/bg-02.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.pagebg::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008f;
+}

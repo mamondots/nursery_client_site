@@ -1,0 +1,43 @@
+.card_box {
+  position: relative;
+}
+.card_box::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #828e4c79;
+  z-index: 2;
+  border-top-left-radius: 12px;
+}
+
+.card_box2 {
+  position: relative;
+}
+.card_box2::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #828e4c79;
+  z-index: 2;
+}
+
+.card_box3 {
+  position: relative;
+}
+.card_box3::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #828e4c79;
+  z-index: 2;
+  border-top-right-radius: 12px;
+}
