@@ -10,7 +10,11 @@ const ProductsItems = () => {
   const [category, setCategory] = useState("");
   const [availability, setAvailability] = useState("");
 
-  const { data, isLoading, isError } = useGetProductsQuery({
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useGetProductsQuery({
     search: searchValue,
     sortBy: sortValue,
     category,
@@ -20,7 +24,7 @@ const ProductsItems = () => {
   if (isLoading) {
     return <h2 className="left-[50%] relative">loading.....</h2>;
   }
-  if (!isLoading && !isError && data.data?.length === 0) {
+  if (!isLoading && !isError && products?.data?.data?.length === 0) {
     return (
       <div className="text-center p-20 ">
         <h2 className="text-lg font-semibold">
@@ -30,10 +34,7 @@ const ProductsItems = () => {
     );
   }
 
-  const { data: products } = data;
-
-  console.log(category);
-
+  console.log("for data", products);
   return (
     <div className="xl:px-20  px-10 py-16 w-full">
       <div className="lg:flex gap-6">
@@ -182,7 +183,7 @@ const ProductsItems = () => {
           </div>
 
           <div className="grid gap-4 lg:grid-cols-3 md:grid-cols-2 mt-6">
-            {products?.map((product: TProduct) => (
+            {products?.data?.map((product: TProduct) => (
               <ProductCard key={product._id} product={product}></ProductCard>
             ))}
           </div>

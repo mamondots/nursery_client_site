@@ -8,13 +8,12 @@ import { TProduct } from "../../redux/types";
 import ManageTable from "./ManageTable";
 
 const ManageProducts = () => {
-  const { data, isLoading, isError } = useGetProductsQuery([]);
+  const { data: products, isLoading, isError } = useGetProductsQuery([]);
   if (isLoading) {
     return <h2>loading.....</h2>;
   }
 
-  const { data: products } = data;
-
+  console.log(products);
   return (
     <div className="w-full lg:px-2 px-12">
       <div className="flex flex-col items-center text-center">

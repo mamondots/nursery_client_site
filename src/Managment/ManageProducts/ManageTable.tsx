@@ -7,7 +7,7 @@ import Doilog from "../../utilits/Doilog";
 
 const ManageTable = ({ products }) => {
   const [deleteSingleProduct] = useDeleteSingleProductMutation();
-
+  console.log(products);
   const handleDeleteItem = (id: string) => {
     Swal.fire({
       title: "Are you sure?",
@@ -45,7 +45,7 @@ const ManageTable = ({ products }) => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product: TProduct, index: any) => (
+          {products?.map((product: TProduct, index: any) => (
             <tr key={product._id}>
               <td>{index + 1}</td>
               <td>

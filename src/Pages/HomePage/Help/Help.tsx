@@ -1,5 +1,6 @@
 import React from "react";
 import "./Help.css";
+import { Link } from "react-router-dom";
 const Help = () => {
   return (
     <div className="">
@@ -38,9 +39,11 @@ const Help = () => {
             We Are Right Here To Help You Realize Your Green Dream <br></br>{" "}
             CALL US: <span className="text-[#828E4C]">+8801746770324</span>
           </h2>
-          <button className="bg-[#828E4C] hover:bg-[#fff] hover:text-[#262626] duration-300 text-[#fff] px-6 py-3 text-[14px] font-medium tracking-[2px] my-4">
-            CONTACT US
-          </button>
+          <Link to="/contact">
+            <button className="bg-[#828E4C] hover:bg-[#fff] hover:text-[#262626] duration-300 text-[#fff] px-6 py-3 text-[14px] font-medium tracking-[2px] my-4">
+              CONTACT US
+            </button>
+          </Link>
         </div>
       </div>
     </div>

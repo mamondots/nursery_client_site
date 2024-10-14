@@ -7,7 +7,7 @@ import ManagementSideBar from "../Managment/ManagementSideBar/ManagementSideBar"
 
 const ManagmentLayout = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Navbar></Navbar>
       <ManagmentHead></ManagmentHead>
       <div className="lg:flex xl:px-20  px-10 py-16">

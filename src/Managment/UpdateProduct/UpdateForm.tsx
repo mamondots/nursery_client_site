@@ -124,8 +124,8 @@ const UpdateForm = ({ product }) => {
             className="px-4 py-2 border border-[#E4E5D4] outline-none"
           >
             <option value="">{product.availability}</option>
-            <option value="Instock">In stock</option>
-            <option value="Outofstock">Out of stock</option>
+            <option value="Instock">Instock</option>
+            <option value="Outofstock">Outofstock</option>
           </select>
         </div>
       </div>

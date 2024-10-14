@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryProductSilder from "./CategoryProductSilder/CategoryProductSilder";
+import { Link } from "react-router-dom";
 
 const CategoryProducts = () => {
   return (
@@ -19,9 +20,11 @@ const CategoryProducts = () => {
         <CategoryProductSilder></CategoryProductSilder>
 
         <div className="flex items-center justify-center mt-8">
-          <button className="py-3 px-6 text-[14px] text-[#828E4C] hover:bg-[#828E4C] hover:text-[#fff] duration-300 uppercase font-medium border border-[#828E4C] tracking-[2px]">
-            view more products
-          </button>
+          <Link to="/products">
+            <button className="py-3 px-6 text-[14px] text-[#828E4C] hover:bg-[#828E4C] hover:text-[#fff] duration-300 uppercase font-medium border border-[#828E4C] tracking-[2px]">
+              view more products
+            </button>
+          </Link>
         </div>
       </div>
     </div>

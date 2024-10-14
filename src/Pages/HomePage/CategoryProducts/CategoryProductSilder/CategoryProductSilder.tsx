@@ -69,13 +69,13 @@ const CategoryProductSilder = () => {
     return <h2>loading.....</h2>;
   }
 
-  const { data: products } = data;
+  // const { data: products } = data;
 
-  console.log(products);
+  console.log(data);
   return (
     <div>
       <Slider {...settings}>
-        {products?.slice(0, 5).map((product: TProduct) => (
+        {data?.data?.slice(0, 5).map((product: TProduct) => (
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </Slider>
