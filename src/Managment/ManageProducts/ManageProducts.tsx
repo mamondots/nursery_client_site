@@ -24,7 +24,7 @@ const ManageProducts = () => {
       </div>
 
       <div className="py-12">
-        <ManageTable products={products}></ManageTable>
+        <ManageTable products={products.data}></ManageTable>
       </div>
     </div>
   );
